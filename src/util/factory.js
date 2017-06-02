@@ -124,7 +124,7 @@ const GoogleSheet = function (sheetReference, sheetName) {
 
         plotLogo(content);
 
-        var bannerText = '<h1>Building your radar...</h1><p>Your Technology Radar will be available in just a few seconds</p>';
+        var bannerText = '<h1>Building radar...</h1><p>OpenMRS Radar will be available in just a few seconds</p>';
         plotBanner(content, bannerText);
         plotFooter(content);
 
