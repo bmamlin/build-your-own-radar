@@ -9,6 +9,6 @@ deploy:
   on:
     branch: openmrs
   local_dir: dist
-  fqdn: radar.ekrub.org
+  fqdn: radar.openmrs.org
   name: Burke Mamlin
   email: burke@openmrs.org
