@@ -201,9 +201,19 @@ const GoogleSheetInput = function () {
   var sheet
 
   self.build = function () {
-    var domainName = DomainName(window.location.search.substring(1))
-    var queryString = window.location.href.match(/sheetId(.*)/)
-    var queryParams = queryString ? QueryParams(queryString[0]) : {}
+    var domainName
+    var queryParams
+    if (process.env.RADAR_SHEET_ID) {
+      domainName = DomainName(process.env.RADAR_SHEET_ID)
+      queryParams = {
+        'sheetId':   process.env.RADAR_SHEET_ID,
+        'sheetName': process.env.RADAR_SHEET_NAME
+      }
+    } else {
+      domainName = DomainName(window.location.search.substring(1))
+      var queryString = window.location.href.match(/sheetId(.*)/)
+      queryParams = queryString ? QueryParams(queryString[0]) : {}
+    }
 
     if (domainName && queryParams.sheetId.endsWith('csv')) {
       sheet = CSVDocument(queryParams.sheetId)
