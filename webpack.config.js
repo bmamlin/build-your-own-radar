@@ -45,7 +45,8 @@ const plugins = [
     'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
     'process.env.SKIP_GOOGLE_AUTH': JSON.stringify(process.env.SKIP_GOOGLE_AUTH),
     'process.env.RADAR_SHEET_ID': JSON.stringify(process.env.RADAR_SHEET_ID),
-    'process.env.RADAR_SHEET_NAME': JSON.stringify(process.env.RADAR_SHEET_NAME)
+    'process.env.RADAR_SHEET_NAME': JSON.stringify(process.env.RADAR_SHEET_NAME),
+    'process.env.HIDE_ALTERNATIVES': JSON.stringify(process.env.HIDE_ALTERNATIVES)
   })
 ]
 

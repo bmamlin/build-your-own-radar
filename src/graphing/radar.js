@@ -610,7 +610,8 @@ const Radar = function (size, radar) {
     currentSheet = radar.getCurrentSheet()
     var header = plotRadarHeader()
 
-    if (alternatives.length) {
+    var hideAlternatives = process.env.HIDE_ALTERNATIVES || false
+    if (!hideAlternatives && alternatives.length) {
       plotAlternativeRadars(alternatives, currentSheet)
     }
 
